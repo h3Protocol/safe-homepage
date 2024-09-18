@@ -1,46 +1,29 @@
 import { motion, type MotionValue, useSpring, useTransform } from 'framer-motion'
 import { useEffect } from 'react'
-import { calculateYPosition } from '@/components/DataRoom/TransactionsOnChain/utils/calculateYPosition'
-import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import css from './styles.module.css'
+import { calculateYPosition } from './utils/calculateYPosition'
 
-type CounterProps = {
-  value: number
-}
-
-type DigitProps = {
-  place: number
-  value: number
-}
-
-type NumberProps = {
-  mv: MotionValue<number>
-  number: number
-}
-
-const DIGIT_HEIGHT_SM = 120
-const DIGIT_HEIGHT_MD = 215
-
-const Counter = ({ value }: CounterProps) => {
-  const integerPart = Math.floor(value)
-  const decimalPart = value % 1
-
+const Counter = ({ value }: { value: number }) => {
   return (
     <div className={css.counter}>
-      <Digit place={1} value={integerPart} />
-      <span className={css.counterSpan}>.</span>
-      <Digit place={0.1} value={decimalPart} />
-      <Digit place={0.01} value={decimalPart} />
-      <span className={css.counterSpan}>%</span>
+      <Digit place={1} value={value} />
+      <div className={css.dot}>
+        <div className={css.number}>.</div>
+      </div>
+      <Digit place={0.1} value={value} />
+      <Digit place={0.01} value={value} />
+      <div className={css.percentage}>
+        <div className={css.number}>%</div>
+      </div>
     </div>
   )
 }
 
-const Digit = ({ place, value }: DigitProps) => {
+const Digit = ({ place, value }: { place: number; value: number }) => {
   const valueRoundedToPlace = Math.floor(value / place) % 10
   const animatedValue = useSpring(valueRoundedToPlace, {
-    damping: 5,
-    stiffness: 15,
+    stiffness: 50,
+    damping: 15,
   })
 
   useEffect(() => {
@@ -56,12 +39,11 @@ const Digit = ({ place, value }: DigitProps) => {
   )
 }
 
-const Number = ({ mv, number }: NumberProps) => {
-  const height = useIsMediumScreen() ? DIGIT_HEIGHT_SM : DIGIT_HEIGHT_MD
-  const yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, height))
+const Number = ({ mv, number }: { mv: MotionValue<number>; number: number }) => {
+  const y = useTransform(mv, (latest) => calculateYPosition(latest, number))
 
   return (
-    <motion.span style={{ y: yPosition }} className={css.number}>
+    <motion.span style={{ y }} className={css.number}>
       {number}
     </motion.span>
   )
