@@ -21,18 +21,19 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.0.0'
+          node-version: '18'
           cache: 'yarn'
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Ensure required dependencies are installed
+      - name: Install missing dependencies
         run: |
-          yarn add postprocessing sharp
+          yarn add postprocessing
+          yarn add sharp # Optional but recommended
 
-      - name: Build Next.js project
-        run: yarn build || echo "Build failed, skipping deployment"
+      - name: Build Next.js site
+        run: yarn build
 
       - name: Export static files
         run: yarn next export
@@ -40,6 +41,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: h3Protocol/h3protocol.github.io
-          branch: main
+          branch: gh-pages
           folder: out
