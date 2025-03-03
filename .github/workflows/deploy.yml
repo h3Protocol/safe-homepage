@@ -26,9 +26,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Force Build (Ignore Errors)
-        run: |
-          CI=false yarn build || echo "Build failed, continuing with deployment"
+      - name: Build project
+        run: CI=false yarn build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
