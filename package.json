@@ -39,7 +39,8 @@
     "react-ga4": "^2.0.0",
     "react-twitter-embed": "^4.0.4",
     "swr": "^2.0.3",
-    "three": "^0.166.1"
+    "three": "^0.166.1",
+    "postprocessing": "^6.26.3"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
