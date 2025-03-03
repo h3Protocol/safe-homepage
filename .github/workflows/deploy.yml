@@ -22,24 +22,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install
 
-      - name: Install missing dependencies
-        run: |
-          yarn add postprocessing
-          yarn add sharp # Optional but recommended
-
-      - name: Build Next.js site
-        run: yarn build
-
-      - name: Export static files
-        run: yarn next export
+      - name: Build project
+        run: npm run build --force
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: out
+          folder: build
