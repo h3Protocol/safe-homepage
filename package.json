@@ -39,7 +39,7 @@
     "react-ga4": "^2.0.0",
     "react-twitter-embed": "^4.0.4",
     "swr": "^2.0.3",
-    "three": "^0.166.1",
+    "three": "^0.174.0",
     "postprocessing": "^6.26.3"
   },
   "devDependencies": {
@@ -54,7 +54,7 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
-    "@types/three": "^0.166.0",
+    "@types/three": "^0.174.0",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "cf-content-types-generator": "^2.15.5",
     "eslint": "8.32.0",
