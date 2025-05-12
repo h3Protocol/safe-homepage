@@ -1144,10 +1144,10 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
-"@contentful/content-source-maps@^0.11.0", "@contentful/content-source-maps@^0.11.6":
-  version "0.11.6"
-  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.6.tgz#a547e06953495576e065aa2896295d2f8cc3be49"
-  integrity sha512-kiP0LcqAMj+Kvt+sLpI1KlqSh2isGkQXRulTEwKZGorXDTbSN3rWfFo/4ysHk2CvlWyF1NotNkB4Thz6LNiHTQ==
+"@contentful/content-source-maps@^0.11.0", "@contentful/content-source-maps@^0.11.8":
+  version "0.11.15"
+  resolved "https://registry.yarnpkg.com/@contentful/content-source-maps/-/content-source-maps-0.11.15.tgz#2e499e4c5b062df87072d616635f2b54a894ee8c"
+  integrity sha512-3ljhXYRTiZG3pYGFTs8dZbua7Lo/pyU3fhTIgnCJOQSNKuFrYW4cfROzFXz6sg6z+hwSTzoxobvD37bSeNRqCw==
   dependencies:
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
@@ -2658,10 +2658,10 @@ axe-core@^4.6.2:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.6.3.tgz#fc0db6fdb65cc7a80ccf85286d91d64ababa3ece"
   integrity sha512-/BQzOX780JhsxDnPpH4ZiyrJAzcd8AfzFPkv+89veFSr1rcMjuq2JDCwypKaPeB6ljHp9KjXhPpjgCvQlWYuqg==
 
-axios@^1.7.4, axios@^1.7.8:
-  version "1.7.9"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.9.tgz#d7d071380c132a24accda1b2cfc1535b79ec650a"
-  integrity sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==
+axios@^1.7.4, axios@^1.7.8, axios@^1.8.4:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.9.0.tgz#25534e3b72b54540077d33046f77e3b8d7081901"
+  integrity sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -3225,14 +3225,14 @@ contentful@^10.14.1:
     json-stringify-safe "^5.0.1"
     type-fest "^4.0.0"
 
-contentful@^11.1.4, contentful@^11.3.1:
-  version "11.3.1"
-  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.3.1.tgz#c477183cbd4de7decfed5992e96f0ef7455cb52d"
-  integrity sha512-9kVP4yZPbd9bfGZyvGdmztiHQ1pzZi/sK1uscM65kAYMpQgt0XNrxfO8JyiSrHGA6D+r/wyIxWeEQaEvoyi9GQ==
+contentful@^11.1.4, contentful@^11.5.21:
+  version "11.5.21"
+  resolved "https://registry.yarnpkg.com/contentful/-/contentful-11.5.21.tgz#efe4c83f1a997d08a34a6e75da4ef864d6364908"
+  integrity sha512-WPj26kCTHNOka35A/Thon1RXG+SFhkJSsuPXgua0dF9Iks8SDqQKCA5YXQDfhYeikmefiiukqzLw3W2Ai7NFRA==
   dependencies:
-    "@contentful/content-source-maps" "^0.11.6"
+    "@contentful/content-source-maps" "^0.11.8"
     "@contentful/rich-text-types" "^16.6.1"
-    axios "^1.7.4"
+    axios "^1.8.4"
     contentful-resolve-response "^1.9.0"
     contentful-sdk-core "^9.0.1"
     json-stringify-safe "^5.0.1"
@@ -6365,6 +6365,11 @@ postcss@8.4.14:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+postprocessing@^6.26.3:
+  version "6.37.3"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.37.3.tgz#33d4f287044bb41c84316d1a91eabdb4458b442f"
+  integrity sha512-2FzfZg41Ml/ddvSalLdCz7H53Wmr/ZvK238fauTG1CI97+65BDgo1dNH6AKhAWc5q9ngpyG5EYiXVbNCl2t1iA==
 
 postprocessing@^6.32.1:
   version "6.35.5"
